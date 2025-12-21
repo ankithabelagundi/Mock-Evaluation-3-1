@@ -5,13 +5,12 @@ import ThemeToggle from "./components/ThemeToggle";
 
 
 function App() {
- const {theme }= useContext(ThemeContext);
  return(
-  <div>
+  <div className="app light">
     <ThemeToggle/>
     <PostList/>
     </div>
  );
 }
 
-export default App
+export default App;
