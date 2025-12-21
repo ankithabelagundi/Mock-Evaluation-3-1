@@ -8,7 +8,7 @@ export const ThemeProvider= ({childern})=>
         setTheme((prev)=>(prev==="light"?"dark":"light"))
     };
     return(
-        <ThemeContext.Provider values={{ theme,toggleTheme}}>
+        <ThemeContext.Provider value={{ theme,toggleTheme }}>
             {childern}
         </ThemeContext.Provider>
     );

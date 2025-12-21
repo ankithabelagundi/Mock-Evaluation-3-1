@@ -22,7 +22,7 @@ const deletePost=(id)=>{
 };
 return(
     <PostContext.Provider value={{
-        posts,updatePost,deletePost
+        posts, UpdatePost,deletePost
     }}>
         {childern}
     </PostContext.Provider>
