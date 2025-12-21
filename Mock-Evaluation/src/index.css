@@ -1,68 +1,36 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.app.light{
+  background:whitesmoke;
+  color:#000;
 }
-a:hover {
-  color: #535bf2;
+.app.dark{
+  background:rgb(27, 26, 26);
+  color:#fff
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+button{
+  margin:5px;
+  padding:6px 10px;
+  cursor:pointer;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minimax(300px,1fr));
+  gap:16px;
+  padding:20px;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.card{
+  padding:15px;
+  border-radius:6px;
 }
-button:hover {
-  border-color: #646cff;
+.card.light{
+  background: whitesmoke;
+  color:black;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.card.dark{
+  background: #1e1e1e;
+  color: white;
 }
