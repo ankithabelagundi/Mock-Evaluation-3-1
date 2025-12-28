@@ -11,7 +11,7 @@ function Login() {
     const handleLogin=()=>{
         if(email==="admin@gmail.com" && password ==="admin1234"){
             alert("Login sucess");
-            localStorage.setItem("isAuth","true");
+            localStorage.setItem("isAuth" , "true");
             navigate("/admin");
         } else{
             alert("Wrong email or password")
