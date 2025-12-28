@@ -9,7 +9,7 @@ function Login() {
         emailRef.current.focus();
     },[]);
     const handleLogin=()=>{
-        if(email==="admin2gamil.com" && password ==="admin123"){
+        if(email==="admin@gamil.com" && password ==="admin123"){
             alert("Login sucess");
             localStorage.setItem("isAuth","true");
             navigate("/admin");
@@ -29,6 +29,7 @@ function Login() {
             placeholder="Password"
             value={password}
             onChange={(e)=>setPassword(e.target.value)} />
+            <button onClick={handleLogin}>Login</button>
         </div>
     );
 }
