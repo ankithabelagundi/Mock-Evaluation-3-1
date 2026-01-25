@@ -68,4 +68,23 @@ export const UpdateOrder= async(req,res)=>
 
     }
     res.json({message:"Order updated sucessfully"});
+};
+export const deleteOrder=async(req,res)=>{
+    const{orderId}=req.params;
+    const{data:order}=await supabase 
+    .from("orders")
+    .select("id")
+    .eq("id",oredrId)
+    .single();
+    if(!order){
+        return res.status(404).json({error:"order not found"});
+    }
+    const{error}=await supabase
+    .from("orders")
+    .delete()
+    .eq("id",orderId);
+    if(error){
+        return res.status(500).json({error:error.message});
+    }
+    res.json({message:"oredr deleted sucessfully"});
 }
